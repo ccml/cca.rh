@@ -1,0 +1,48 @@
+.circle-wrap {
+    margin: 150px auto;
+    width: 150px;
+    height: 150px;
+    background: #fefcff;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .mask2,
+.circle-wrap .circle .fill,
+.circle-wrap .circle .fill2 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.mask .fill {
+  clip: rect(0px, 50px, 150px, 0px);
+  background-color: #227ded;
+}
+.mask2 .fill2 {
+    clip: rect(0px, 150px, 150px, 100px);
+    background-color: #227ded;
+}
+.icon_diplomes {
+    position: relative;
+    top: 60px;
+    left: 20px;
+    font-size: 20px;
+    color: white;
+}
+.icon_offres {
+    position: relative;
+    top: 60px;
+    left: 40px;
+    font-size: 20px;
+    color: red;
+}
+.icon_candidats {
+    position: relative;
+    top: 60px;
+    left: 70px;
+    font-size: 20px;
+    color: white;
+}
