@@ -1,4 +1,4 @@
-.container{
+.container-fluid{
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: auto 1fr;
@@ -7,6 +7,8 @@
         "nav main"
         "footer main";
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 header{
     grid-area: header;

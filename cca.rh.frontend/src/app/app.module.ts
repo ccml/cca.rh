@@ -16,6 +16,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -41,7 +42,8 @@ registerLocaleData(localeFr, 'fr');
         useFactory: httpTranslateLoader,
         deps: [HttpClient],
       },
-    })
+    }),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

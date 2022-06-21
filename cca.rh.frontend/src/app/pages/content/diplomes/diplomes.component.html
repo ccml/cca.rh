@@ -1,1 +1,34 @@
-<p>diplomes works!</p>
+<table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">
+            <div class="line">
+                {{ 'page.content.diplomes.titreListe' | translate }}
+                <div class="btn-group" role="group">
+                    <label class="btn-primary" ngbButtonLabel>
+                        <fa-icon [icon]="faPlus"></fa-icon>
+                    </label>
+                </div>
+            </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let diplome of diplomes">
+        <td>
+            <div class="line">
+                {{ diplome.titre }}
+                <div class="btn-group" role="group">
+                    <label class="btn-primary" ngbButtonLabel>
+                        <fa-icon [icon]="faEdit"></fa-icon>
+                    </label>
+                    <label class="btn-secondary" ngbButtonLabel>
+                        <fa-icon [icon]="faRemove"></fa-icon>
+                    </label>
+                </div>
+            </div>
+            
+        </td>
+      </tr>
+    </tbody>
+  </table>
