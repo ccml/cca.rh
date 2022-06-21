@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/offre-emploi")
+@RequestMapping("/api/offre-emploi")
 public class OffreEmploiResource {
 
     @Autowired
