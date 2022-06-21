@@ -1,0 +1,11 @@
+{
+    "page" : { 
+        "layout" : {
+            "menu" : {
+                "diplomes" : "Diplômes",
+                "offres" : "Offres",
+                "candidats" : "Candidats"
+            }
+        }
+    }
+}

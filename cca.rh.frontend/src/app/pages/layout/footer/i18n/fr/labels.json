@@ -1,0 +1,10 @@
+{
+    "page" : { 
+        "layout" : {
+            "footer" : {
+                "signIn" : "Connexion",
+                "signOut" : "Déconnexion"
+            }
+        }
+    }
+}

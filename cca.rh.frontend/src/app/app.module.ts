@@ -11,8 +11,13 @@ import { DiplomesComponent } from './pages/content/diplomes/diplomes.component';
 import { OffresComponent } from './pages/content/offres/offres.component';
 import { CandidatsComponent } from './pages/content/candidats/candidats.component';
 import { HomeComponent } from './pages/content/home/home.component';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr, 'fr');
 
 @NgModule({
   declarations: [
@@ -28,7 +33,15 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient],
+      },
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

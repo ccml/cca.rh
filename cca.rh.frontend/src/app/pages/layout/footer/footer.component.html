@@ -2,12 +2,12 @@
 <div class="footer" *ngIf="!isAuthenticated">
     <a href="javascript:void(0)" (click)="signIn()">
         <fa-icon [icon]="faSignIn"></fa-icon>
-        <span> Sign in</span>
+        <span> {{ 'page.layout.footer.signIn' | translate }}</span>
     </a>
 </div>
 <div class="footer" *ngIf="isAuthenticated">
     <a href="javascript:void(0)" (click)="signOut()">
         <fa-icon [icon]="faSignOut"></fa-icon>
-        <span> Sign out</span>
+        <span> {{ 'page.layout.footer.signOut' | translate }}</span>
     </a>
 </div>
