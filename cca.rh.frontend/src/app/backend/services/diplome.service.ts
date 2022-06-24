@@ -17,4 +17,15 @@ export class DiplomeService {
         return this.httpClient.get<Diplome[]>(this.serviceBaseUrl);
     }
 
+    public ajouterDiplome(diplome: Diplome) : Observable<Diplome> {
+        return this.httpClient.post<Diplome>(this.serviceBaseUrl, diplome);
+    }
+
+    public modifierDiplome(diplome: Diplome) : Observable<Diplome> {
+        return this.httpClient.put<Diplome>(this.serviceBaseUrl, diplome);
+    }
+
+    public supprimerDiplome(id:number) : Observable<boolean> {
+        return this.httpClient.delete<boolean>(this.serviceBaseUrl + '/' + id);
+    }
 }

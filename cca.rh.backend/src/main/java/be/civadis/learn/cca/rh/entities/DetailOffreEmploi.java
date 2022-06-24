@@ -20,7 +20,7 @@ public class DetailOffreEmploi {
 
     @JsonBackReference
     @OneToOne
-    @JoinColumn(name = "id_offre_emploi")
+    @JoinColumn(name = "id_offre_emploi", referencedColumnName = "id")
     private OffreEmploi offreEmploi;
 
 }

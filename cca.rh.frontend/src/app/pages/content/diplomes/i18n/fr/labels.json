@@ -2,7 +2,19 @@
     "page" : { 
         "content" : {
             "diplomes" : {
-                "titreListe" : "Diplômes"
+                "titreListe" : "Diplômes",
+                "titreAjout" : "Ajout d'un diplôme",
+                "titreUpdate" : "Modification du titre d'un diplôme",
+                "titreRemove" : "Suppression d'un diplôme",
+                "diplomeTitre": "Titre du diplôme",
+                "actions" : {
+                    "Add": "Ajouter",
+                    "Edit": "Modifier",
+                    "Remove": "Supprimer"    
+                },
+                "errors" : {
+                    "titreRequired" : "Le titre est requis"
+                }
             }
         }
     }

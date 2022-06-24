@@ -1,4 +1,4 @@
-package be.civadis.learn.cca.rh.entities;
+package be.civadis.learn.cca.rh.entities.enums;
 
 public enum RegimeTravail {
     REGIME_100,

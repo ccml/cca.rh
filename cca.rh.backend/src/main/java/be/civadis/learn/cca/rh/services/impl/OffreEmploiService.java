@@ -31,6 +31,7 @@ public class OffreEmploiService implements OffreEmploiServiceInterface {
     @Transactional
     @Override
     public OffreEmploi creerOffresEmploi(OffreEmploi offreEmploi) {
+        offreEmploi.getDetail().setOffreEmploi(offreEmploi);
         var savedOffreEmploi = offreEmploiRepository.save(offreEmploi);
         return savedOffreEmploi;
     }

@@ -1,10 +1,11 @@
 package be.civadis.learn.cca.rh.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import be.civadis.learn.cca.rh.entities.enums.RegimeTravail;
+import be.civadis.learn.cca.rh.entities.enums.StatutOffre;
+import be.civadis.learn.cca.rh.entities.enums.TypeEngagement;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Optional;
 
 @Data
 @Entity
