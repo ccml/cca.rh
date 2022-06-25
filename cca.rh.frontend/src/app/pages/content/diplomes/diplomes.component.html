@@ -31,7 +31,7 @@
         </td>
       </tr>
     </tbody>
-  </table>
+</table>
 
   <ng-template #mymodal let-modal>
     <div class="modal-header">
@@ -45,10 +45,10 @@
     <form [formGroup]="diplomeFormGroup" *ngIf="diplomeFormGroup">
       <div class="modal-body">
         <div class="form-group">
-          <label for="titre">{{ 'page.content.diplomes.diplomeTitre' | translate }}</label>
+          <label for="titre">{{ 'fields.diplome.titre' | translate }}</label>
           <input class="form-control" id="titre" type="text" formControlName="titre" [readonly]="currentMode === 'Remove'">
           <div *ngIf="diplomeFormGroup.controls['titre'].errors?.['required']" style="color: red; font-style: italic;">
-            {{ 'page.content.diplomes.errors.titreRequired' | translate }}
+            {{ 'fields.errors.diplome.titreRequired' | translate }}
           </div>
         </div>
     </div>

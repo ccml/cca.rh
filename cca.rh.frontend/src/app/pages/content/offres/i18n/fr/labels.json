@@ -1,0 +1,14 @@
+{
+    "page" : { 
+        "content" : {
+            "offresEmplois" : {
+                "titreListe" : "Offres d'emplois",
+                "liste" : "Liste des offres d'emplois",
+                "detail" : "Détail d'une offre",
+                "actionsDetail" : {
+                    "valider": "Valider"
+                }
+            }
+        }
+    }
+}

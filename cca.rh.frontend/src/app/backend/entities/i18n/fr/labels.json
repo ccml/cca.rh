@@ -1,0 +1,27 @@
+{
+    "fields" : {
+        "diplome": {
+            "titre": "Titre"
+        },
+        "offreEmploi" : {
+            "numero" : "Référence",
+            "titre": "Titre",
+            "statut": "Statut",
+            "typeEngagement": "Type d'engagement",
+            "lieuTravail": "Lieu de travail",
+            "regimeTravail": "Régime de travail",
+            "detail": "Détail"
+        },
+        "errors": {
+            "diplome": {
+                "titreRequired": "Le titre est requis"
+            },
+            "offreEmploi" : {
+                "numeroRequired" : "La référence est requise",
+                "titreRequired": "Le titre est requis",
+                "lieuTravailRequired": "Le lieu de travail est requis",
+                "detailRequired": "Le détail est requis"
+            }    
+        }
+    }
+}

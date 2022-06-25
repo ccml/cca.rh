@@ -1,0 +1,61 @@
+<form [formGroup]="offreEmploiFormGroup" *ngIf="offreEmploi">
+    <div class="card">
+        <div class="card-header">
+            Test
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="numero">{{ 'fields.offreEmploi.numero' | translate }}</label>
+                <input class="form-control" id="numero" type="text" formControlName="numero">
+                <div *ngIf="offreEmploiFormGroup.controls['numero'].errors?.['required']" style="color: red; font-style: italic;">
+                    {{ 'fields.errors.offreEmploi.numeroRequired' | translate }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="titre">{{ 'fields.offreEmploi.titre' | translate }}</label>
+                <input class="form-control" id="titre" type="text" formControlName="titre">
+                <div *ngIf="offreEmploiFormGroup.controls['titre'].errors?.['required']" style="color: red; font-style: italic;">
+                    {{ 'fields.errors.offreEmploi.titreRequired' | translate }}
+                </div>
+            </div>
+            <div class="form-group" *ngIf="enumsList">
+                <label for="statut">{{ 'fields.offreEmploi.statut' | translate }}</label>
+                <select class="form-control" formControlName="statut">
+                    <option *ngFor="let statutOffre of enumsList.statutOffreList">{{ statutOffre }}</option>
+                </select>
+            </div>
+            <div class="form-group" *ngIf="enumsList">
+                <label for="typeEngagement">{{ 'fields.offreEmploi.typeEngagement' | translate }}</label>
+                <select class="form-control" formControlName="typeEngagement">
+                    <option *ngFor="let typeEngagement of enumsList.typeEngagementList">{{ typeEngagement }}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="lieuTravail">{{ 'fields.offreEmploi.lieuTravail' | translate }}</label>
+                <input class="form-control" id="lieuTravail" type="text" formControlName="lieuTravail">
+                <div *ngIf="offreEmploiFormGroup.controls['lieuTravail'].errors?.['required']" style="color: red; font-style: italic;">
+                    {{ 'fields.errors.offreEmploi.lieuTravailRequired' | translate }}
+                </div>
+            </div>
+            <div class="form-group" *ngIf="enumsList">
+                <label for="regimeTravail">{{ 'fields.offreEmploi.regimeTravail' | translate }}</label>
+                <select class="form-control" formControlName="regimeTravail">
+                    <option *ngFor="let regimeTravail of enumsList.regimeTravailList">{{ regimeTravail }}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="detail">{{ 'fields.offreEmploi.detail' | translate }}</label>
+                <input class="form-control" id="detail" type="text" formControlName="detail">
+                <div *ngIf="offreEmploiFormGroup.controls['detail'].errors?.['required']" style="color: red; font-style: italic;">
+                    {{ 'fields.errors.offreEmploi.detailRequired' | translate }}
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary" type="submit" [disabled]="!offreEmploiFormGroup.valid">
+                <fa-icon [icon]="faCheck"></fa-icon>
+                <span> {{ 'page.content.offresEmplois.actionsDetail.valider' | translate }}</span>
+            </button>    
+        </div>
+</div>
+</form>

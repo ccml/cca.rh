@@ -1,1 +1,36 @@
-<p>offres works!</p>
+<h1>{{ 'page.content.offresEmplois.titreListe' | translate }}</h1>
+<h5>
+  <span *ngIf="!isDetail">{{ 'page.content.offresEmplois.liste' | translate }}</span>
+  <a *ngIf="isDetail" href="javascript: void(0);" (click)="afficherListe()">{{ 'page.content.offresEmplois.liste' | translate }}</a>
+  <span *ngIf="isDetail"> &gt; {{ 'page.content.offresEmplois.detail' | translate }}</span>  
+</h5>
+<table class="table table-striped table-hover" *ngIf="!isDetail">
+    <thead>
+      <tr>
+        <th scope="col">
+            <div class="line">
+                <span> </span>
+                <div class="btn-group" role="group" >
+                    <label class="btn-primary" ngbButtonLabel>
+                        <fa-icon [icon]="faPlus"></fa-icon>
+                    </label>
+                </div>
+            </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let offreEmploi of offresEmplois">
+        <td>
+            <div class="line">
+                {{ offreEmploi.titre }}
+                <button class="btn btn-primary" (click)="afficherDetail(offreEmploi)">
+                    <fa-icon [icon]="faEye"></fa-icon>
+                </button>
+            </div>
+            
+        </td>
+      </tr>
+    </tbody>
+</table>
+<app-offre-detail *ngIf="isDetail" [offreEmploiId]="currentOffreEmploiId"></app-offre-detail>

@@ -18,6 +18,7 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OffreDetailComponent } from './pages/content/offres/offre-detail/offre-detail.component';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -30,7 +31,8 @@ registerLocaleData(localeFr, 'fr');
     DiplomesComponent,
     OffresComponent,
     CandidatsComponent,
-    HomeComponent
+    HomeComponent,
+    OffreDetailComponent
   ],
   imports: [
     BrowserModule,
