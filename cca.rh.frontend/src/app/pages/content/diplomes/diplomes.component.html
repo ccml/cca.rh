@@ -1,13 +1,16 @@
+<h1>{{ 'page.content.diplomes.titreListe' | translate }}</h1>
 <table class="table table-striped table-hover">
     <thead>
       <tr>
         <th scope="col">
             <div class="line">
-                {{ 'page.content.diplomes.titreListe' | translate }}
-                <div class="btn-group" role="group" (click)="open(mymodal, 'Add')">
+              <span> </span>
+                <div>
+                  <div class="btn-group" role="group" (click)="open(mymodal, 'Add')">
                     <label class="btn-primary" ngbButtonLabel>
                         <fa-icon [icon]="faPlus"></fa-icon>
                     </label>
+                  </div>
                 </div>
             </div>
         </th>

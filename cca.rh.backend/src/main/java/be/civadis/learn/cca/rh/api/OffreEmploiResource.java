@@ -34,7 +34,6 @@ public class OffreEmploiResource {
 
     @PostMapping
     public OffreEmploi add(@RequestBody OffreEmploi offreEmploi) {
-        var savedOffreEmploi = offreEmploiService.creerOffresEmploi(offreEmploi);
-        return savedOffreEmploi;
+        return offreEmploiService.creerOffresEmploi(offreEmploi);
     }
 }

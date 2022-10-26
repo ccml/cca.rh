@@ -6,6 +6,7 @@ import be.civadis.learn.cca.rh.services.DiplomeServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityNotFoundException;
@@ -29,6 +30,7 @@ public class DiplomeService implements DiplomeServiceInterface {
         return diplomeRepository.findAll();
     }
 
+    @Transactional
     @Override
     public Diplome ajouterDiplome(Diplome diplome) {
         var existingDiplome = diplomeRepository.findByTitre(diplome.getTitre());
@@ -39,6 +41,7 @@ public class DiplomeService implements DiplomeServiceInterface {
         return addedDiplome;
     }
 
+    @Transactional
     @Override
     public Diplome modifierDiplome(Diplome diplome) {
         var existingDiplome = diplomeRepository.findById(diplome.getId());
@@ -49,6 +52,7 @@ public class DiplomeService implements DiplomeServiceInterface {
         return updatedDiplome;
     }
 
+    @Transactional
     @Override
     public boolean supprimerDiplome(Long idDiplome) {
         var existingDiplome = diplomeRepository.findById(idDiplome);
